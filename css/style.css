@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  perspective: 600px;
+}
+
+.content{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.kubg{
+  width: 300px;
+  height: 300px;
+  border: 3px solid #000;
+  background: rgb(177, 160, 13);
+  animation-name: animKubg;
+  animation-duration: 4s;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+
+@keyframes animKubg{
+  0%{
+    background: rgb(73, 173, 7);
+    border-radius: 50%;
+  }
+
+  25%{
+    background: rgb(206, 81, 9);
+    border-radius: 10%;
+    transform: translate(300px, 0px);
+  }
+
+  50%{
+    background: rgb(36, 90, 172);
+    border-radius: 20%;
+    transform: translate(300px, 300px);
+  }
+
+  100%{
+    background: rgb(73, 173, 7);
+    transform: translate(0px, 300px);
+    border-radius: 50%;
+  }
+}
